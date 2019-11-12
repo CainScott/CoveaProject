@@ -119,6 +119,27 @@ function getPolicies(){
     
 }
 
+
+function getPolicy(){
+  text = ""
+  fetch('https://api.thesmokinggnu.net/api/policies')
+    .then(response => response.json())
+    .then(data=>{
+     console.log(data)
+     console.log("need this:")
+     console.log(data.policies[1])
+    //for (policy of data.policies[1]){
+       //text += "ID: "+data.policies[1].id+" Name: "+policy.policyname + "<br> Description: "+policy.policydetails+"<br><br>";
+       text += " Name: "+data.policies[1].policyname+"<br> Description: "+data.policies[1].policydetails+"<br><br>";
+    //}
+    document.getElementById("policies").innerHTML = text;
+    })
+    .catch(err=>{// Do something for an error here
+    })
+    document.getElementById("div_policies").style.display = "block";
+    
+}
+
 function hidePolicies(){
     document.getElementById("div_policies").style.display = "none";
 
