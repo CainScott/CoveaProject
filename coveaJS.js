@@ -176,8 +176,13 @@ function getCustomerDetail(){
      text += "ID: "+customernum+"<br>Name: "+data.firstname+" "+data.surname+"<br>Address: "+data.address1+"<br>Address: "+data.address2+"<br>Postcode: "+data.postcode+"<br>Phone Number: "+data.phonenumber+"<br>email: "+data.email;
      document.getElementById("firstname").innerHTML = text;
     }
-    document.getElementById("firstname").innerHTML = data.firstname
-    document.getElementById("lastname").innerHTML = data.surname
+    var customername = data.firstname+" "+data.surname
+    document.getElementById("firstname").innerHTML = customername
+	document.getElementById("address1").innerHTML = data.address1
+	document.getElementById("address2").innerHTML = data.address2
+	document.getElementById("Postcode").innerHTML = data.postcode
+    document.getElementById("Email").innerHTML = data.email
+	document.getElementById("Phonenumber").innerHTML = data.phonenumber
     })
     .catch(err=>{// Do something for an error here
     })
