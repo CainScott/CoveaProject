@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(80deg, #5f4b8bff, #5f4b8bff);
+  background: linear-gradient(80deg, #000000, #000000);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -110,7 +110,7 @@ a:hover
   padding: 50px;
   padding-top: 75px;
 
-  background: #66518f;
+  background: #A9A9A9;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
 
